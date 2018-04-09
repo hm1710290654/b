@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        table {
+            text-align: center;
+            width: 300px;
+            border: 1px solid;
+
+        }
+
+        .first {
+            background-color: yellow;
+            width: 300px;
+            height: 30px;
+        }
+
+        .second {
+            background-color: beige;
+            width: 300px;
+            height: 30px;
+        }
+    </style>
+</head>
+<!--<body onload="changeColor()">-->
+<body>
+
+<script>
+    document.body.innerHTML += "<table id='tab'><thead><th>商品</th><th>单价</th><th>数量</th><th>总价</th></thead><tr><td>乔丹球鞋</td><td>998</td><td>1双</td><td></td></tr><tr><td>黑人牙膏</td><td>20</td><td>4支</td><td></td></tr><tr><td>茶叶</td><td>300</td><td>1.25两</td><td></td></tr></table>"
+
+    var tab = document.getElementById('tab');
+    /*获取表格元素*/
+    var trs = tab.getElementsByTagName('tr');
+    /*获取行*/
+
+    for (var i = 1; i < trs.length; i++) {
+        var tds = trs[i].getElementsByTagName('td');
+        tds[3].innerHTML = parseFloat(tds[1].innerText) * parseFloat(tds[2].innerText) + "元";
+        /*隔行换色*/
+        if (i % 2 == 1) {
+            trs[i].style.background = "#ccc";
+        } else {
+            trs[i].style.background = "yellow";
+        }
+    }
+
+
+
+
+    /*var tds = trs[1].getElementsByTagName('td');
+     /!*获取一行中的单元格*!/
+     tds[3].innerHTML = parseFloat(tds[1].innerText) * parseFloat(tds[2].innerText) + "元";
+     tds = trs[2].getElementsByTagName('td');
+     tds[3].innerHTML = parseFloat(tds[1].innerText) * parseFloat(tds[2].innerText) + "元";
+     tds = trs[3].getElementsByTagName('td');
+     tds[3].innerHTML = parseFloat(tds[1].innerText) * parseFloat(tds[2].innerText) + "元";*/
+
+
+
+
+
+    /* function changeColor() {
+     var mytableRows = document.getElementById('tab').rows;//表格总行数
+     var count = mytableRows.length;
+     for (var i = 0; i < count; i++) {
+     if (i % 2 == 0) {
+     mytableRows[i].setAttribute("class", "first");
+     }
+     else {
+     mytableRows[i].setAttribute("class", "second");
+     }
+     }
+     }*/
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @media (min-width: 700px) {
+            body{
+                background: red;
+            }
+        }
+
+        .box{
+            width: 100px;
+            height: 100px;
+        }
+        .first{
+            background: blue;
+            float: left;
+
+        }
+        .second{
+            background: yellow;
+            float: right;
+        }
+        .second:before{/*伪元素*/
+            display: block;
+            content: 'b';
+        }
+        .second:after{
+            display: block;
+            content: 'a';
+        }
+        .third{
+            background: black;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="box first"></div>
+<div class="box second">内容</div>
+<div class="box third"></div>
+</body>
+</html>

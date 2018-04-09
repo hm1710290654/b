@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            height: 0px;
+        }
+
+        #root{
+            border: 1px solid #cccccc;
+    width: 210px;
+    height: 230px;
+            animation: a infinite 10s;
+            transition: 3s;
+        }
+        button{
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            transform: translate(185px,3px);
+            position: absolute;
+            border: 0 solid;
+        }
+#tupian{
+    width: 20px;
+    height: 20px;
+}
+  #guanggao{
+      width: 220px;
+      height: 220px;
+    /* background-color: #ccc;*/
+     /* background: url("广告3.jpg");*/
+  }
+        #guanggao img{
+            width: 210px;
+      height: 220px;
+        }
+         .left{
+            position: absolute;
+            left: 10px;
+
+        }
+        .right{
+            position: absolute;
+            right: 10px;
+        }
+        @keyframes a {
+            50%{
+                transform: translate(0,400px);
+            }
+
+        }
+    </style>
+</head>
+<body>
+<div id="root"  class="left" onclick="taozou(this)">
+    <div id="anniu">
+        <button ><img src="按钮.jpg" id="tupian"></button>
+    </div>
+    <div id="guanggao" >
+
+    </div>
+</div>
+
+
+<script>
+ function taozou(a){
+        console.log(a);
+      /*  判断当前东西在哪里，
+
+      如果它在左边，我就让他去右边，
+      否则就让他在左边*/
+        if(a.classList.contains('left')){
+            a.classList.remove('left');
+            a.classList.add('right');
+        }
+        else{
+
+            a.classList.remove('right');
+             a.classList.add('left');
+        }
+    }
+
+
+   var num = 0;
+    setInterval(function(){
+        var dd = document.getElementById("guanggao");
+        if(num++ % 2==0){
+             dd.innerHTML = "<img src='广告1.png'>"; }
+            else {
+                dd.innerHTML = "<img src='广告2.jpg'>";
+            }
+        },1000);
+</script>
+</body>
+</html>

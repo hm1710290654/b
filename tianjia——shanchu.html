@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<table id="tab">
+    <tr>
+        <td>name</td>
+        <td>age</td>
+        <td>sex</td>
+        <td>duanwei</td>
+        <td>bianji</td>
+    </tr>
+</table>
+<button onclick="add()">add</button><!--这个按钮不会提交-->
+<form id="ff">
+    <input type="text" id="uname" >
+    <input type="button" value="queren" onclick="addTr()">
+    <select name="duanwei" id="">
+    <option value="huangjin">huangjin</option>
+    <option value="huangjin">huangjin</option>
+    </select>
+
+</form>
+
+<script>
+    var tab=document.getElementById('tab');
+    var num=0;
+    function addTr(){
+        var uname=document.getElementById('uname');
+
+    var str=`<tr id="haha${++num}">
+        <td>${uname.value}</td>
+        <td>age</td>
+        <td>sex</td>
+        <td>duanwei</td>
+        <td>bianji</td>
+        <td><a href="javascript:del(${num})">delet</a>|<a>fengxin</a></td>
+    </tr>`;
+        tab.innerHTML +=str;
+         /*ff.style.display='none';*/
+    }
+
+function del(abc){
+    var tr = document.getElementById("haha"+abc);
+    tr.remove();
+}
+
+
+    /*function add(){
+
+        ff.style.display='block';
+    }
+*/
+</script>
+</body>
+</html>

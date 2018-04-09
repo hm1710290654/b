@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>接受用户的输入</title>
+    <style>
+        body{
+            width: 1000px;
+            height: 500px;
+        }
+        .form-item{
+margin: 10px auto;
+        }
+        .form-item label{
+            display: inline-block;
+    width: 100px;
+    height: 30px;
+    text-align: right;
+    font-weight: bold;
+    color: #333;
+        }
+       .form-item input{
+           height: 25px;
+           width: 245px;
+           border-radius: 5px;
+       }
+        input[type=radio]{
+            width: 30px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body >
+<form >
+    <div class="form-item">
+    <label for="age">Age:</label>
+    <input type="text" name="age" id="age">
+        </div>
+    <div class="form-item">
+    <label for="pass">password:</label>
+    <input type="password" name="age" id="pass">
+        </div>
+    <div class="form-item">
+    <label >sex:</label>
+    man<input type="radio" name="sex" value="man" >
+        girl<input type="radio" name="sex" value="woman" >
+        </div>
+    <div class="form-item">
+        <label ></label>
+        <input type="button" value="提交" onclick="subform()"><!--onclick是公有的属性-->
+    </div>
+</form>
+<script>
+    function subform(){
+        alert("aiya")
+    }
+    var age=document.getElementById('age')
+</script>
+</body>
+</html>

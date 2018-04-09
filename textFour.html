@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>/*css 负责平面的样式，和显示方式*/
+        .haha{
+            color: orangered;
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50%,-50%);
+        }
+        #title{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+<h1></h1><!--html负责页面的内容-->
+<script>/*javascript  页面的动态效果，并且可以干其他两种技术能干的事情*/
+
+
+    /*document.title="淘宝网"
+    var hh=document.querySelector("h1");
+    hh.innerHTML="淘宝网!";
+*/
+
+/*一个程序有三个要素：数据处理，输入，输出*/
+document.onscroll=function(e){
+    alert("My javascript")
+}
+ document.body.style.height="1000px";
+
+/*aa.classList.add('haha')/!*添加样式*!/
+aa.classList.add('xixi')
+aa.classList.remove('xixi')
+aa.classList.remove('haha')*/
+var num = 0;//声明变量格式
+
+   /* setTimeout(,);  延迟事件*/
+    setInterval(function(){
+         var dd = document.querySelector("h1");
+        if(num++ %2 == 0){
+            dd.innerHTML = "云想衣裳花想容"; }
+            else {
+                dd.innerHTML = "春风拂面露华浓";
+            }
+        if(num == 5){
+            dd.classList.add('haha');
+            dd.id = 'title';
+        }
+    },2000);/*周期事件*/
+</script>
+</body>
+</html>

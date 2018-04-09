@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        #root {
+            width: 1000px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #head {
+            /*background: greenyellow;*/
+            height: 100px;
+        }
+
+        #middle {
+            display: flex;
+        }
+
+        #left {
+            width: 300px;
+            /* background: orange;*/
+            top: 100px;
+            left: 0;
+        }
+
+        #right {
+            width: 700px;
+            /*background: gray;*/
+
+        }
+
+        #foot {
+            /*background: pink;*/
+            height: 100px;
+        }
+
+        #tab {
+            height: 400px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+<div id="root">
+    <div id="head"></div><!--head end!-->
+    <div id="middle">
+        <div id="left"></div><!--left end!-->
+        <div id="right">
+            <table id="tab"></table>
+        </div><!--right end!-->
+    </div><!--middle end!-->
+    <div id="foot"></div>
+</div><!--root end!-->
+
+
+<script>
+    var persons = [
+        {name: "张三", age: 33, sex: '男'},
+        {name: "老王", age: 45, sex: '男'},
+        {name: "彭桂香", age: 19, sex: '女'},
+        {name: "李卫红", age: 60, sex: '女'},
+        {name: "王二狗", age: 5, sex: '男'},
+    ];
+
+    function showTable() {
+        var str = "";
+//    for(i=0;i<persons.length;i++){
+        for (var i in persons) {
+//        if(i in persons)
+            str += "<tr>"
+            for (var j in persons[i]) {
+                str += "<td>" + persons[i][j] + "</td>"
+            }
+
+//        str+=`
+//        <tr>
+//        <td>${persons[i].name}</td>
+//        <td>${persons[i].age}</td>
+//        <td>${persons[i].sex}</td>
+//        <td><a href="javascript:del(${i})">delete</a></td>
+//        </tr>`
+            str += `<td><a href="javascript:del(${i})">delete</a></td>`
+            str += "</tr>"
+        }
+        document.querySelector('#tab').innerHTML = str;
+
+    }
+    showTable();
+    function del(line) {
+        delete persons[line];
+        showTable();
+    }
+
+    function max(a, b) {
+        return a > b ? a : b;
+    }
+    function f(x){
+        return 10*x+22;
+    }
+    var xiaoMiaoGuan={
+        name:"老官面",
+        address:"银盆南路88号",
+        phone:"070000000",
+        paoMian:function(a){
+            var caidan = ["红烧牛肉面","牛杂粉"];
+            return caidan[a];
+        }
+    };
+
+    var mian = xiaoMiaoGuan.paoMian(1);
+    console.log(mian);
+
+    var oneDayThing=[
+        function(){
+
+    },
+      function(){
+
+    }
+    ];
+
+    for(var i in oneDayThing){
+        oneDayThing[i]();
+    }
+
+</script>
+</body>
+</html>

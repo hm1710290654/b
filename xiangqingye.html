@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝商品</title>
+    <style>
+        * { /*样式重置*/
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #root {
+            /*background: gray;*/
+            width: 1000px;
+            min-height: 1000px;
+            margin: 0 auto; /*水平居中*/
+            position: relative; /*定位*/
+        }
+.layout {
+            position: absolute;
+        }
+
+        #header {
+            /*background: pink;*/
+            width: 100%;
+            height: 100px;
+
+        }
+
+        #nav {
+            width: 1000px;
+            height: 30px;
+        }
+
+        #nav li {
+            float: left;
+            width: 10%;
+            height: 30px;
+            text-align: center;
+            background: #f5f5f5;
+
+        }
+
+        #nav li > a {
+            text-decoration: none;
+            color: black;
+            line-height: 30px; /*垂直居中*/
+
+        }
+
+        #logo {
+            font-family: 隶书;
+            height: 70px;
+            color: orangered;
+            display: block;
+            position: fixed;
+        }
+#sousuo{
+    width: 900px;
+    /*background: red;*/
+    height: 70px;
+    margin-left: 100px;
+    text-align: center;
+    line-height: 70px;
+    overflow: hidden;
+}
+#sousuobox{
+    height: 40px;
+    width: 540px;
+    border: 3px solid orangered;
+}
+#sousuo button{
+    width: 80px;
+    height: 46px;
+    background: orangered;
+    color: white;
+    border: 0 solid;
+}
+#sousuo button>a{
+    color: white;
+    text-decoration: none;
+}
+        #min {
+            width: 1000px;
+            min-height: 250px;
+            top: 100px;
+        }
+
+        #min-left {
+            /* background: red;*/
+            width: 20%;
+            min-height: 250px;
+        }
+
+        #min-right {
+            /* background: orange;*/
+            width: 80%;
+            min-height: 250px;
+            right: 0px;
+        }
+
+        .zi-color {
+            color: #9a9a9a;
+        }
+
+        .zi-size {
+            font-size: 25px;
+            color: red;
+            font-weight: bold;
+        }
+
+        #min-right table {
+            width: 750px;
+            margin: 0 auto;
+        }
+
+        hr {
+
+            border: none;
+            border-top: 1px solid #ededed;
+        }
+
+        td {
+            height: 30px;
+        }
+
+        #foot {
+            /* background: black;*/
+            width: 1000px;
+            height: 650px;
+            bottom: 0;
+        }
+
+        .yincang {
+            display: none;
+        }
+
+        #foot-left {
+            width: 180px;
+            height: 550px;
+            /*background: brown;*/
+
+        }
+
+        #foot-right {
+            width: 800px;
+            height: 550px;
+            top: 350px;
+            right: 0;
+        }
+
+        #foot-top {
+            width: 800px;
+
+            height: 50px;
+
+        }
+
+        #foot-top li {
+            float: left;
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+
+        }
+        #foot-top a {
+            text-decoration: none;
+        }
+
+        #foot-bottom {
+            top: 50px;
+        }
+    </style>
+</head>
+<html>
+<body>
+<div id="root">
+    <div id="header">
+        <ul id="nav">
+            <li><a href="textThree.html">淘宝首页</a></li>
+            <li><a href="">我的淘宝</a></li>
+            <li><a href="">购物车</a></li>
+            <li><a href="">收藏夹</a></li>
+            <li><a href="">商品分类</a></li>
+            <li><a href="">卖家中心</a></li>
+            <li><a href="">联系客服</a></li>
+            <li><a href="">网站导航</a></li>
+            <li><a href="">登录</a></li>
+            <li><a href="">注册</a></li>
+        </ul>
+        <div id="logo">
+            <h1>淘宝网</h1>
+            <h3>Taobao.com</h3>
+        </div>
+        <div id="sousuo">
+            <input type="text" value="荣耀" id="sousuobox"><button><a href="#">搜索</a></button>
+        </div>
+    </div>
+    <hr>
+    <div id="min" class="layout">
+
+        <div id="min-left" class="layout">
+            <h2 style="text-align: center">荣耀 畅玩7C </h2>
+            <img src="tu2.png" alt="">
+        </div>
+        <div id="min-right" class="layout">
+            <table>
+                <tr>
+                    <td colspan="4"><span class="zi-color">全网参考价：</span><span class="zi-size">￥999</span></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><span>7115</span><span class="zi-color">人付款</span></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><br>
+                        <hr>
+                    </td>
+                </tr>
+                <td colspan="4"><span class="zi-color">特点：</span><span>人脸识别 双摄美拍</span></td>
+                </tr>
+                <tr>
+                    <td><span class="zi-color">尺寸：</span><span>大屏5.99英寸</span></td>
+                    <td><span class="zi-color">像素：</span><span>1300万后双摄像头</span></td>
+                    <td colspan="2"><span class="zi-color">核心数：</span><span>八核</span></td>
+                </tr>
+                <tr>
+                    <td><span class="zi-color">运行内存RAM：</span><span> 4GB,3GB</span></td>
+                    <td><span class="zi-color">机身存储：</span> <span>64GB,32GB</span></td>
+                    <td colspan="2"><span class="zi-color">分辨率：</span> <span>1440*720</span></td>
+                </tr>
+                <tr>
+                    <td><span class="zi-color">CPU频率：</span><span>1.8GHz</span></td>
+                    <td><span class="zi-color">CPU型号：</span> <span>高通 骁龙450</span></td>
+                    <td><span class="zi-color">电池容量：</span><span> 持久待机</span></td>
+                    <td><span>查看更多参数></span></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <div id="foot" class="layout">
+        <hr>
+        <div id="foot-left" class="layout">
+            <img src="捕获.PNG" alt="">
+            <img src="捕获2.PNG">
+        </div>
+    </div>
+    <div id="foot-right" class="layout">
+        <div id="foot-top" class="layout">
+            <ul>
+                <li><a href="javascript:show(0)">商品详情</a></li>
+                <li><a href="javascript:show(1)">参数规格</a></li>
+                <li><a href="javascript:show(2)">累计评价</a></li>
+
+            </ul>
+        </div>
+        <div id="foot-bottom" class="layout">
+
+            <div class="child-content yincang" id="first">
+                <ul>
+                    <li>
+                        <img src="xq.PNG"></li>
+                </ul>
+            </div>
+            <div class="child-content yincang" id="second">
+                <ul>
+                    <li><img src="shangpingcanshu.PNG"></a></li>
+                </ul>
+            </div>
+            <div class="child-content yincang" id="thirth">
+                <ul>
+                    <li>累计评价<img src="pingjia.PNG"></li>
+                </ul>
+            </div>
+            <div id="moren">
+                <ul>
+                    <li>
+                        <img src="shangpingxiangqing.PNG"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var rr = document.getElementById('foot-bottom');
+    function show(e) {
+        for (var i = 0; i < 3; i++) {/*因为有四个元素*/
+            if (e == i) {/*被点击的当前对应的div*/
+                rr.children[e].classList.remove('yincang');
+            } else {/*其他的div*/
+                rr.children[i].classList.add('yincang');
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>
